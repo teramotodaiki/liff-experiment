@@ -2,6 +2,17 @@ window.onload = function (e) {
     liff.init(function (data) {
         initializeApp(data);
     });
+
+
+    this.navigator.getUserMedia({audio:false,video:true},(media)=>{
+        const video = document.getElementById("test");
+        video.src = URL.createObjectURL(media);
+        video.addEventListener("canplaythrough",()=>{
+            video.play();
+        });
+    },(e)=>{
+        this.console.error(e);
+    })
 };
 
 function initializeApp(data) {
