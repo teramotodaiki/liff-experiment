@@ -43,3 +43,11 @@ img {
 button {
     margin: 4px;
 }
+
+#viewtypefield,
+#useridfield,
+#utouidfield,
+#roomidfield,
+#groupidfield {
+    visibility: hidden;
+}
